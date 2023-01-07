@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  systems-environment-management:
+    image: tensornetics/systems-environment-management:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+
