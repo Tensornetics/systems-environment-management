@@ -1,0 +1,7 @@
+name: systems-environment-management
+version: 0.1.0
+description: Control and manage a system for growing bonsai trees in a controlled environment
+maintainers:
+  - name: Tensornetics
+    email: info@tensornetics.com
+appVersion: 0.1.0
