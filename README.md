@@ -26,5 +26,16 @@ systems-environment-management
 ├── database
 │ ├── vectorized_cloud_database.go
 │ └── mod.go
+├── hardware
+│ ├── environment_control_system.go
+│ ├── nutrient_delivery_system.go
+│ ├── pest_and_disease_management_system.go
+│ ├── pruning_and_training_system.go
+│ ├── data_collection_and_analysis_system.go
+│ ├── machine_learning_system.go
+│ ├── predictive_maintenance_system.go
+│ ├── system_integration_and_management_system.go
+│ ├── hardware_kernel_subsystem.go
+│ └── mod.go
 └── mod.go
 ```
