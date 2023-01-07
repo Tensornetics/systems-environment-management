@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: systems-environment-management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: systems-environment-management
+  template:
+    metadata:
+      labels:
+        app: systems-environment-management
+    spec:
+      containers:
+      - name: systems-environment-management
+        image: tensornetics/systems-environment-management:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+        - name: models
+          mountPath: /app/models
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: systems-environment-management-data
+      - name: models
+        persistentVolumeClaim:
+          claimName: systems-environment-management-models
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: systems-environment-management
+spec:
+  type: LoadBalancer
+  selector:
+    app: systems-environment-management
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+
