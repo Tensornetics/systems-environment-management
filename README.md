@@ -1,4 +1,16 @@
 # systems-environment-management
+# Systems Environment Management
+### Control and manage a system for growing bonsai trees in a controlled environment.
+
+## Features ##
+*Environment control
+         *Nutrient delivery
+         *Pest and disease management
+         *Pruning and training
+         *Data collection and analysis
+         *Machine learning
+         *Predictive maintenance
+
 
 ```
 systems-environment-management
